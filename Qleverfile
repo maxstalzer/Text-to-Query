@@ -1,0 +1,22 @@
+[data]
+NAME = keyboards
+DESCRIPTION = Keyboards Wikibase snapshot 
+
+[index]
+# Pointing it directly to your data folder
+INPUT_FILES = data/keyboards.nt
+CAT_INPUT_FILES = cat data/keyboards.nt
+
+[server]
+PORT = 7070
+TIMEOUT = 30s
+
+[runtime]
+SYSTEM = docker
+IMAGE = docker.io/adfreiburg/qlever:latest
+
+[ui]
+UI_CONFIG = default
+UI_PORT = 8176
+UI_SYSTEM = docker
+UI_IMAGE = docker.io/adfreiburg/qlever-ui
